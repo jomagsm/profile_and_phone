@@ -41,11 +41,15 @@ class Employees {
   List all;
   Employees(this.all);
 
-  addEmployee(employee) => this.all.add(employee);
+  void addEmployee(employee) {
+    this.all.add(employee);
+  }
 }
+// addEmployee(employee) => this.all.add(employee);
+// }
 
 getFixtures() {
-  Employees employees;
+  var employees = Employees([]);
   employees.addEmployee(Employee(
     'Мырзабек',
     'Жыпаркулов',
@@ -102,7 +106,7 @@ getFixtures() {
     phoneWork: 99655111122321,
     phoneWhatsApp: 99651323232,
   ));
-  return employees;
+  return employees.all;
 }
 
 // Жыпаркулов Мырзабек Жыпаркулович
