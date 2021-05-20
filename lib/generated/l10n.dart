@@ -94,6 +94,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Направление`
+  String get direction {
+    return Intl.message(
+      'Направление',
+      name: 'direction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Отдел`
+  String get departament {
+    return Intl.message(
+      'Отдел',
+      name: 'departament',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Дата рождения`
+  String get dob {
+    return Intl.message(
+      'Дата рождения',
+      name: 'dob',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Телефон основной`
+  String get phone {
+    return Intl.message(
+      'Телефон основной',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Телефон рабочий`
+  String get phoneWork {
+    return Intl.message(
+      'Телефон рабочий',
+      name: 'phoneWork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Телефон WhatsApp`
+  String get phoneWhatsApp {
+    return Intl.message(
+      'Телефон WhatsApp',
+      name: 'phoneWhatsApp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

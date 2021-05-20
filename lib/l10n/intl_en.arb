@@ -1,8 +1,15 @@
 {
-    "staff":"Сотрудники",
-    "find":"Поиск",
-    "whoBirthDay":"У кого сегодня день рождения",
-    "noBirthday":"Нет именинников",
-    "whoBirthDayToworrow":"У кого завтра день рождения",
-    "allStaff":"Все сотрудники"
+    "staff": "Сотрудники",
+    "find": "Поиск",
+    "whoBirthDay": "У кого сегодня день рождения",
+    "noBirthday": "Нет именинников",
+    "whoBirthDayToworrow": "У кого завтра день рождения",
+    "allStaff": "Все сотрудники",
+    "direction": "Направление",
+    "departament": "Отдел",
+    "email":"Email",
+    "dob":"Дата рождения",
+    "phone": "Телефон основной",
+    "phoneWork":"Телефон рабочий",
+    "phoneWhatsApp":"Телефон WhatsApp"
 }

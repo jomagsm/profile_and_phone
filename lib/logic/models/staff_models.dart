@@ -44,6 +44,14 @@ class Employees {
   void addEmployee(employee) {
     this.all.add(employee);
   }
+
+  getEmployee(id) {
+    for (final i in this.all) {
+      if (i.id == id) {
+        return i;
+      }
+    }
+  }
 }
 
 getFixtures() {
@@ -74,8 +82,6 @@ getFixtures() {
     '${now.day + 1}.${now.month}.1972',
     9965555555555,
     'assets/images/profiles_avatar/2.png',
-    phoneWork: 99655555555,
-    phoneWhatsApp: 996555555555,
   ));
 
   employees.addEmployee(Employee(
@@ -133,5 +139,6 @@ getFixtures() {
     phoneWhatsApp: 99651323232,
   ));
 
-  return employees.all;
+  print('+++++++++++++++++++Fixturi+++++++++++++++++++');
+  return employees;
 }

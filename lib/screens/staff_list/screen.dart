@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
+import 'package:profile_and_contact/global/global.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
 import 'package:profile_and_contact/logic/who_bitrhday.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/birthday_list_view.dart';
@@ -17,7 +18,7 @@ class StaffList extends StatefulWidget {
 }
 
 class _StaffListState extends State<StaffList> {
-  final List employeesList = getFixtures();
+  final List employeesList = globalEmployeesList;
   List toDayBirthDay;
   List tomorrowBirthDay;
   bool toDayBirthDayFlag = false;

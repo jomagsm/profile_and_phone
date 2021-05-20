@@ -22,8 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "allStaff" : MessageLookupByLibrary.simpleMessage("Все сотрудники"),
+    "departament" : MessageLookupByLibrary.simpleMessage("Отдел"),
+    "direction" : MessageLookupByLibrary.simpleMessage("Направление"),
+    "dob" : MessageLookupByLibrary.simpleMessage("Дата рождения"),
+    "email" : MessageLookupByLibrary.simpleMessage("Email"),
     "find" : MessageLookupByLibrary.simpleMessage("Поиск"),
     "noBirthday" : MessageLookupByLibrary.simpleMessage("Нет именинников"),
+    "phone" : MessageLookupByLibrary.simpleMessage("Телефон основной"),
+    "phoneWhatsApp" : MessageLookupByLibrary.simpleMessage("Телефон WhatsApp"),
+    "phoneWork" : MessageLookupByLibrary.simpleMessage("Телефон рабочий"),
     "staff" : MessageLookupByLibrary.simpleMessage("Сотрудники"),
     "whoBirthDay" : MessageLookupByLibrary.simpleMessage("У кого сегодня день рождения"),
     "whoBirthDayToworrow" : MessageLookupByLibrary.simpleMessage("У кого завтра день рождения")

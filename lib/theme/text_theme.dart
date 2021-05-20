@@ -36,6 +36,28 @@ class TextThemes {
       height: getTextHeight(16, 19.2),
       fontWeight: FontWeight.w400,
       color: ColorPalet.textBlack);
+
+  static var detailViewFullName = TextStyle(
+      fontFamily: 'Museo Sans Cyrl',
+      fontSize: 20,
+      height: getTextHeight(20, 24),
+      fontWeight: FontWeight.w500,
+      color: ColorPalet.textBlack);
+
+  static var blueH3w400 = TextStyle(
+      fontFamily: 'Museo Sans Cyrl',
+      fontSize: 16,
+      height: getTextHeight(16, 19.2),
+      fontWeight: FontWeight.w400,
+      color: ColorPalet.blueText);
+
+  static var grey12 = TextStyle(
+    fontFamily: 'Museo Sans Cyrl',
+    fontSize: 12,
+    height: getTextHeight(12, 14.4),
+    fontWeight: FontWeight.w400,
+    color: ColorPalet.greyA8,
+  );
 }
 
 getTextHeight(double size, double height) {
