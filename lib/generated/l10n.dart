@@ -54,6 +54,16 @@ class S {
       args: [],
     );
   }
+
+  /// `У кого сегодня день рождения`
+  String get whoBirthDay {
+    return Intl.message(
+      'У кого сегодня день рождения',
+      name: 'whoBirthDay',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

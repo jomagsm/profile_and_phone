@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
+import 'package:profile_and_contact/logic/who_bitrhday.dart';
+import 'package:profile_and_contact/screens/staff_list/widgets/find_container.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
 import 'package:profile_and_contact/theme/text_theme.dart';
 
@@ -13,7 +15,15 @@ class StaffList extends StatefulWidget {
 
 class _StaffListState extends State<StaffList> {
   final List employeesList = getFixtures();
+  List toDayBirthDay;
+  List tomorrowBirthDay;
   @override
+  void initState() {
+    toDayBirthDay = whoBirthdayToday(employeesList);
+    tomorrowBirthDay = whoBirthdayTomorrow(employeesList);
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorPalet.background,
@@ -21,44 +31,17 @@ class _StaffListState extends State<StaffList> {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: EdgeInsets.only(top: 10, left: 16, right: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(S.of(context).staff, style: TextThemes.profileH1),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                        child: Row(
-                      children: [
-                        Container(
-                          alignment: Alignment.center,
-                          width: 328,
-                          height: 42,
-                          child: TextField(
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.zero,
-                              prefixIcon: Icon(Icons.search,
-                                  color: ColorPalet.darkGrey),
-                              hintText: S.of(context).find,
-                              hintStyle: TextThemes.hintText,
-                              border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                borderSide: BorderSide(
-                                  color: ColorPalet.lightGrey,
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                        // IconButton(icon: Icon(Icons.search), onPressed: () {})
-                      ],
-                    ))
-                  ],
+              FindBarContainer(),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Text(
+                  S.of(context).whoBirthDay,
+                  style: TextThemes.blueH3,
                 ),
               )
             ],

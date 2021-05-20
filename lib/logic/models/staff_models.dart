@@ -45,10 +45,9 @@ class Employees {
     this.all.add(employee);
   }
 }
-// addEmployee(employee) => this.all.add(employee);
-// }
 
 getFixtures() {
+  var now = new DateTime.now();
   var employees = Employees([]);
   employees.addEmployee(Employee(
     'Мырзабек',
@@ -57,7 +56,7 @@ getFixtures() {
     'Дирекция управления',
     'Отдел управления',
     'mjagarkulov@gosecotech.kg',
-    '16.09.1972',
+    '${now.day}.${now.month}.1972',
     9965551234321,
     'assets/images/profiles_avatar/1.png',
     midleName: 'Жыпаркулович',
@@ -72,7 +71,7 @@ getFixtures() {
     'Дирекция управления',
     'Отдел управления',
     'djaman@gosecotech.kg',
-    '21.05.1972',
+    '${now.day + 1}.${now.month}.1972',
     9965555555555,
     'assets/images/profiles_avatar/2.png',
     phoneWork: 99655555555,
@@ -86,7 +85,7 @@ getFixtures() {
     'Дирекция управления',
     'Отдел безопастности',
     'sb@gosecotech.kg',
-    '12.05.1972',
+    '${now.day + 1}.${now.month}.1972',
     99655551111111,
     'assets/images/profiles_avatar/3.png',
     phoneWork: 99655111111,
@@ -100,7 +99,7 @@ getFixtures() {
     'Дирекция управления',
     'Отдел кадров',
     'kadr@gosecotech.kg',
-    '12.05.1980',
+    '${now.day}.${now.month}.1972',
     99655551111111,
     'assets/images/profiles_avatar/4.png',
     phoneWork: 99655111122321,
