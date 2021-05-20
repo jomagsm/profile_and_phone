@@ -64,6 +64,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Нет именинников`
+  String get noBirthday {
+    return Intl.message(
+      'Нет именинников',
+      name: 'noBirthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `У кого завтра день рождения`
+  String get whoBirthDayToworrow {
+    return Intl.message(
+      'У кого завтра день рождения',
+      name: 'whoBirthDayToworrow',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

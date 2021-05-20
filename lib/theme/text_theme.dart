@@ -12,9 +12,16 @@ class TextThemes {
   static var blueH3 = TextStyle(
       fontFamily: 'Museo Sans Cyrl',
       fontSize: 16,
-      height: getTextHeight(16, 19),
+      height: getTextHeight(16, 19.2),
       fontWeight: FontWeight.bold,
       color: ColorPalet.blueText);
+
+  static var blackH3 = TextStyle(
+      fontFamily: 'Museo Sans Cyrl',
+      fontSize: 16,
+      height: getTextHeight(16, 19.2),
+      fontWeight: FontWeight.bold,
+      color: ColorPalet.textBlack);
 
   static var hintText = TextStyle(
       fontFamily: 'Museo Sans Cyrl',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
 import 'package:profile_and_contact/logic/who_bitrhday.dart';
+import 'package:profile_and_contact/screens/staff_list/widgets/birthday_list_view.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/find_container.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
 import 'package:profile_and_contact/theme/text_theme.dart';
@@ -17,10 +18,14 @@ class _StaffListState extends State<StaffList> {
   final List employeesList = getFixtures();
   List toDayBirthDay;
   List tomorrowBirthDay;
+  bool toDayBirthDayFlag = false;
+  bool tomorrowDayBirthDayFlag = false;
   @override
   void initState() {
     toDayBirthDay = whoBirthdayToday(employeesList);
+    toDayBirthDayFlag = toDayBirthDay.length > 0;
     tomorrowBirthDay = whoBirthdayTomorrow(employeesList);
+    tomorrowDayBirthDayFlag = tomorrowBirthDay.length > 0;
     super.initState();
   }
 
@@ -43,7 +48,31 @@ class _StaffListState extends State<StaffList> {
                   S.of(context).whoBirthDay,
                   style: TextThemes.blueH3,
                 ),
-              )
+              ),
+              SizedBox(
+                height: 14,
+              ),
+              toDayBirthDayFlag
+                  ? BirthDayList(toDayBirthDay: toDayBirthDay)
+                  : Container(
+                      margin: EdgeInsets.only(left: 18),
+                      child: Text(S.of(context).noBirthday,
+                          style: TextThemes.hintText)),
+              SizedBox(height: 23),
+              Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: Text(S.of(context).whoBirthDayToworrow,
+                    style: TextThemes.blackH3),
+              ),
+              SizedBox(
+                height: 14,
+              ),
+              tomorrowDayBirthDayFlag
+                  ? BirthDayList(toDayBirthDay: tomorrowBirthDay)
+                  : Container(
+                      margin: EdgeInsets.only(left: 18),
+                      child: Text(S.of(context).noBirthday,
+                          style: TextThemes.hintText)),
             ],
           ),
         ),
