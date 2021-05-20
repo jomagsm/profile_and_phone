@@ -84,6 +84,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Все сотрудники`
+  String get allStaff {
+    return Intl.message(
+      'Все сотрудники',
+      name: 'allStaff',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -29,6 +29,13 @@ class TextThemes {
       height: getTextHeight(16, 20),
       fontWeight: FontWeight.w300,
       color: ColorPalet.darkGrey);
+
+  static var fullname = TextStyle(
+      fontFamily: 'Museo Sans Cyrl',
+      fontSize: 16,
+      height: getTextHeight(16, 19.2),
+      fontWeight: FontWeight.w400,
+      color: ColorPalet.textBlack);
 }
 
 getTextHeight(double size, double height) {

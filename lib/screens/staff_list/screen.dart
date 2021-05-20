@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
 import 'package:profile_and_contact/logic/who_bitrhday.dart';
+import 'package:profile_and_contact/resources/png_icons.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/birthday_list_view.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/find_container.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
 import 'package:profile_and_contact/theme/text_theme.dart';
+
+import 'widgets/all_employyes_list_view.dart';
 
 class StaffList extends StatefulWidget {
   StaffList({Key key}) : super(key: key);
@@ -73,6 +76,10 @@ class _StaffListState extends State<StaffList> {
                       margin: EdgeInsets.only(left: 18),
                       child: Text(S.of(context).noBirthday,
                           style: TextThemes.hintText)),
+              SizedBox(height: 26),
+              AllEmployyesListView(
+                employeesList: employeesList,
+              )
             ],
           ),
         ),
