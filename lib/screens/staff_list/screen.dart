@@ -9,6 +9,7 @@ class StaffList extends StatefulWidget {
 }
 
 class _StaffListState extends State<StaffList> {
+  final List employeesList = getFixtures();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

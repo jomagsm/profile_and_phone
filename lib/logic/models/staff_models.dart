@@ -60,6 +60,49 @@ getFixtures() {
     phoneWork: 9965551234321,
     phoneWhatsApp: 9965551234321,
   ));
+
+  employees.addEmployee(Employee(
+    'Бекмурза',
+    'Жамангулов',
+    'Заместитель директора',
+    'Дирекция управления',
+    'Отдел управления',
+    'djaman@gosecotech.kg',
+    '21.05.1972',
+    9965555555555,
+    'assets/images/profiles_avatar/2.png',
+    phoneWork: 99655555555,
+    phoneWhatsApp: 996555555555,
+  ));
+
+  employees.addEmployee(Employee(
+    'Нурбек',
+    'Эшимкулов',
+    'Начальник охраны',
+    'Дирекция управления',
+    'Отдел безопастности',
+    'sb@gosecotech.kg',
+    '12.05.1972',
+    99655551111111,
+    'assets/images/profiles_avatar/3.png',
+    phoneWork: 99655111111,
+    phoneWhatsApp: 9965111111,
+  ));
+
+  employees.addEmployee(Employee(
+    'Талант',
+    'Сакенов',
+    'Начальник отдел кадров',
+    'Дирекция управления',
+    'Отдел кадров',
+    'kadr@gosecotech.kg',
+    '12.05.1980',
+    99655551111111,
+    'assets/images/profiles_avatar/4.png',
+    phoneWork: 99655111122321,
+    phoneWhatsApp: 99651323232,
+  ));
+  return employees;
 }
 
 // Жыпаркулов Мырзабек Жыпаркулович
