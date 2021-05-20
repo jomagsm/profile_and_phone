@@ -35,7 +35,25 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Сотрудники`
+  String get staff {
+    return Intl.message(
+      'Сотрудники',
+      name: 'staff',
+      desc: '',
+      args: [],
+    );
+  }
 
+  /// `Поиск`
+  String get find {
+    return Intl.message(
+      'Поиск',
+      name: 'find',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
