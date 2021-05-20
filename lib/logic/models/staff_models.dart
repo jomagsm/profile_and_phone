@@ -105,8 +105,33 @@ getFixtures() {
     phoneWork: 99655111122321,
     phoneWhatsApp: 99651323232,
   ));
+  employees.addEmployee(Employee(
+    'Нурбек',
+    'Эшимкулов',
+    'Начальник охраны',
+    'Дирекция управления',
+    'Отдел безопастности',
+    'sb@gosecotech.kg',
+    '${now.day + 1}.${now.month}.1972',
+    99655551111111,
+    'assets/images/profiles_avatar/3.png',
+    phoneWork: 99655111111,
+    phoneWhatsApp: 9965111111,
+  ));
+
+  employees.addEmployee(Employee(
+    'Талант',
+    'Сакенов',
+    'Начальник отдел кадров',
+    'Дирекция управления',
+    'Отдел кадров',
+    'kadr@gosecotech.kg',
+    '${now.day + 5}.${now.month}.1972',
+    99655551111111,
+    'assets/images/profiles_avatar/4.png',
+    phoneWork: 99655111122321,
+    phoneWhatsApp: 99651323232,
+  ));
+
   return employees.all;
 }
-
-// Жыпаркулов Мырзабек Жыпаркулович
-var dateFormate = DateFormat("dd-MM-yyyy").format(DateTime.parse("2019-09-30"));

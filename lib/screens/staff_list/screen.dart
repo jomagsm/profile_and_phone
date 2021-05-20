@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
 import 'package:profile_and_contact/logic/who_bitrhday.dart';
-import 'package:profile_and_contact/resources/png_icons.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/birthday_list_view.dart';
 import 'package:profile_and_contact/screens/staff_list/widgets/find_container.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
@@ -34,6 +33,10 @@ class _StaffListState extends State<StaffList> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: ColorPalet.background,
+          elevation: 0,
+          title: Text(S.of(context).staff, style: TextThemes.profileH1)),
       backgroundColor: ColorPalet.background,
       body: SafeArea(
         child: SingleChildScrollView(

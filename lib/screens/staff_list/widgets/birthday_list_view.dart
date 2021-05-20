@@ -10,7 +10,6 @@ class BirthDayList extends StatelessWidget {
     return Container(
         height: 60,
         child: ListView.builder(
-            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
             itemCount: toDayBirthDay.length,
