@@ -10,4 +10,5 @@ class ColorPalet {
   static var blueText = Color(0xff3B81EA);
   static var detailProfileAppBar = Color(0xffF6F6F6);
   static var divederColor = Color(0xFFDEE1E5);
+  static var black3b = Color(0xff3B3B3B);
 }

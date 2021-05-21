@@ -58,6 +58,13 @@ class TextThemes {
     fontWeight: FontWeight.w400,
     color: ColorPalet.greyA8,
   );
+
+  static var bottomSheetH1w700 = TextStyle(
+      fontFamily: 'Museo Sans Cyrl',
+      fontSize: 20,
+      height: getTextHeight(20, 24),
+      fontWeight: FontWeight.w700,
+      color: ColorPalet.textBlack);
 }
 
 getTextHeight(double size, double height) {

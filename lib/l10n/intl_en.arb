@@ -11,5 +11,6 @@
     "dob":"Дата рождения",
     "phone": "Телефон основной",
     "phoneWork":"Телефон рабочий",
-    "phoneWhatsApp":"Телефон WhatsApp"
+    "phoneWhatsApp":"Телефон WhatsApp",
+    "call":"Позаванить"
 }

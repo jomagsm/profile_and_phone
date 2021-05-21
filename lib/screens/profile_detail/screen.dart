@@ -7,7 +7,6 @@ import 'package:profile_and_contact/screens/profile_detail/widgets/title_content
 import 'package:profile_and_contact/screens/profile_detail/widgets/title_content_phone.dart';
 import 'package:profile_and_contact/screens/staff_list/screen.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
-import 'package:profile_and_contact/theme/text_theme.dart';
 
 class ProfileDetail extends StatefulWidget {
   final int id;
@@ -64,16 +63,21 @@ class _ProfileDetailState extends State<ProfileDetail> {
             content: employee.dob,
           ),
           TitleContentPhone(
-              title: S.of(context).phone, content: '+${employee.phone}'),
+            title: S.of(context).phone,
+            content: '+${employee.phone}',
+            employee: employee,
+          ),
           employee.phoneWork != null
               ? TitleContentPhone(
                   title: S.of(context).phoneWork,
-                  content: '+${employee.phoneWork}')
+                  content: '+${employee.phoneWork}',
+                  employee: employee)
               : SizedBox(),
           employee.phoneWork != null
               ? TitleContentPhone(
                   title: S.of(context).phoneWhatsApp,
-                  content: '+${employee.phoneWhatsApp}')
+                  content: '+${employee.phoneWhatsApp}',
+                  employee: employee)
               : SizedBox(),
         ],
       ),
