@@ -15,6 +15,7 @@ class AllEmployyesListView extends StatelessWidget {
     return Container(
         margin: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(S.of(context).allStaff, style: TextThemes.blackH3),
             SizedBox(height: 16),
@@ -24,62 +25,48 @@ class AllEmployyesListView extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: employeesList.length,
                 itemBuilder: (_, index) {
-                  return InkWell(
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 16),
-                      padding: EdgeInsets.only(
-                          top: 11, left: 16, bottom: 11, right: 21),
-                      decoration: BoxDecoration(
-                          color: ColorPalet.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  return Container(
+                    height: 64,
+                    margin: EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: ColorPalet.white),
+                    child: ListTile(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProfileDetail(id: employeesList[index].id),
+                          ),
+                        );
+                      },
+                      leading: CircleAvatar(
+                        backgroundImage:
+                            AssetImage(employeesList[index].avatar),
+                      ),
+                      title: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 42,
-                            height: 42,
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage(employeesList[index].avatar),
-                            ),
+                          Text(
+                            '${employeesList[index].firstName} ${employeesList[index].lastName}',
+                            style: TextThemes.fullname,
                           ),
-                          Container(
-                            width: 196,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '${employeesList[index].firstName} ${employeesList[index].lastName}',
+                          employeesList[index].midleName != null
+                              ? Text(
+                                  '${employeesList[index].midleName}',
                                   style: TextThemes.fullname,
-                                ),
-                                employeesList[index].midleName != null
-                                    ? Text(
-                                        '${employeesList[index].midleName}',
-                                        style: TextThemes.fullname,
-                                      )
-                                    : Text(
-                                        '',
-                                        style: TextThemes.fullname,
-                                      )
-                              ],
-                            ),
-                          ),
-                          Container(
-                              width: 19.5,
-                              height: 19.5,
-                              child: Image.asset(PngIconsCollect.phone)),
+                                )
+                              : SizedBox()
                         ],
                       ),
+                      trailing: Image.asset(
+                        PngIconsCollect.phone,
+                        width: 20,
+                        height: 20,
+                      ),
                     ),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ProfileDetail(id: employeesList[index].id),
-                        ),
-                      );
-                    },
                   );
                 })
           ],
