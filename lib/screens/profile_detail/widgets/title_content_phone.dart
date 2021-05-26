@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
 import 'package:profile_and_contact/logic/models/staff_models.dart';
 import 'package:profile_and_contact/resources/png_icons.dart';
-import 'package:profile_and_contact/screens/profile_detail/widgets/utils.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
 import 'package:profile_and_contact/theme/text_theme.dart';
+
+import 'utils.dart';
 
 class TitleContentPhone extends StatefulWidget {
   final String title;
