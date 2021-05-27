@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
-import 'package:profile_and_contact/screens/staff_list/screen.dart';
+import 'package:profile_and_contact/screens/employees_list/screen.dart';
 import 'package:profile_and_contact/theme/color_theme.dart';
 
 import 'bloc/profile_detail_bloc.dart';

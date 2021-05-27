@@ -52,10 +52,10 @@ class Employees {
   }
 }
 
-getFixtures() {
+List getFixtures() {
   var now = new DateTime.now();
-  var employees = Employees([]);
-  employees.addEmployee(Employee(
+  List<Employee> employees = [];
+  employees.add(Employee(
     'Мырзабек',
     'Жыпаркулов',
     'Генеральный директор',
@@ -70,7 +70,7 @@ getFixtures() {
     phoneWhatsApp: 9965551234321,
   ));
 
-  employees.addEmployee(Employee(
+  employees.add(Employee(
     'Бекмурза',
     'Жамангулов',
     'Заместитель директора',
@@ -82,7 +82,7 @@ getFixtures() {
     'assets/images/profiles_avatar/2.png',
   ));
 
-  employees.addEmployee(Employee(
+  employees.add(Employee(
     'Нурбек',
     'Эшимкулов',
     'Начальник охраны',
@@ -96,7 +96,7 @@ getFixtures() {
     phoneWhatsApp: 9965111111,
   ));
 
-  employees.addEmployee(Employee(
+  employees.add(Employee(
     'Талант',
     'Сакенов',
     'Начальник отдел кадров',
@@ -109,7 +109,7 @@ getFixtures() {
     phoneWork: 99655111122321,
     phoneWhatsApp: 99651323232,
   ));
-  employees.addEmployee(Employee(
+  employees.add(Employee(
     'Нурбек',
     'Эшимкулов',
     'Начальник охраны',
@@ -123,7 +123,7 @@ getFixtures() {
     phoneWhatsApp: 9965111111,
   ));
 
-  employees.addEmployee(Employee(
+  employees.add(Employee(
     'Талант',
     'Сакенов',
     'Начальник отдел кадров',

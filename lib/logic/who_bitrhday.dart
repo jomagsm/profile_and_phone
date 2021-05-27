@@ -1,7 +1,8 @@
 import 'package:intl/intl.dart';
+import 'package:profile_and_contact/logic/models/staff_models.dart';
 
-whoBirthdayToday(List employyes) {
-  List birthDay = [];
+List<Employee> whoBirthdayToday(List employyes) {
+  List<Employee> birthDay = [];
   var now = new DateTime.now();
   var formatter = new DateFormat('dd.MM.yyyy');
   employyes.forEach((element) {
@@ -13,8 +14,8 @@ whoBirthdayToday(List employyes) {
   return birthDay;
 }
 
-whoBirthdayTomorrow(List employyes) {
-  List birthDay = [];
+List<Employee> whoBirthdayTomorrow(List employyes) {
+  List<Employee> birthDay = [];
   var now = new DateTime.now();
   var formatter = new DateFormat('dd.MM.yyyy');
   employyes.forEach((element) {

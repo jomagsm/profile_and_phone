@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:profile_and_contact/generated/l10n.dart';
-import 'package:profile_and_contact/screens/staff_list/screen.dart';
+
+import 'screens/employees_list/screen.dart';
 
 void main() {
   runApp(MyApp());
